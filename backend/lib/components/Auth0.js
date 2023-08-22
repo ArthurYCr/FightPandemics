@@ -6,7 +6,7 @@ const { config } = require("../../config");
 const {
   auth: { domain: AUTH_DOMAIN },
 } = config;
-
+res.cookie('session_cookie_name', 'session_value', { sameSite: 'lax', httpOnly: true });
 const getAuthHeaders = (token) => {
   return {
     headers: {
